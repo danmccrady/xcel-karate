@@ -1492,13 +1492,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@cloudflare/workers-types@npm:^3.18.0":
-  version: 3.18.0
-  resolution: "@cloudflare/workers-types@npm:3.18.0"
-  checksum: 9b29e52531b0465ef76e640d89c589dd179bb2904ed7a3aadb66164cc2025b74bcf074ee128d98b2b21ec4c675c1e1d04c669b79102ef1db394c169debcc383c
-  languageName: node
-  linkType: hard
-
 "@emotion/babel-plugin@npm:^11.10.5":
   version: 11.10.5
   resolution: "@emotion/babel-plugin@npm:11.10.5"
@@ -4876,20 +4869,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"edge@workspace:edge":
-  version: 0.0.0-use.local
-  resolution: "edge@workspace:edge"
-  dependencies:
-    "@cloudflare/kv-asset-handler": "npm:^0.2.0"
-    "@cloudflare/workers-types": "npm:^3.18.0"
-    "@types/jest": "npm:^29.2.3"
-    "@types/node": "npm:^18.11.9"
-    envars: "npm:^0.4.0"
-    hono: "npm:^2.3.2"
-    typescript: "npm:^4.9.3"
-  languageName: unknown
-  linkType: soft
-
 "electron-to-chromium@npm:^1.4.251":
   version: 1.4.284
   resolution: "electron-to-chromium@npm:1.4.284"
@@ -6435,13 +6414,6 @@ __metadata:
   dependencies:
     react-is: "npm:^16.7.0"
   checksum: fb03b1e426696928dfbae467baf12bdf123fccb051d92fd677c4f290d43dea52ebe7a555c3afc6f3babc657961df2ab50a70bb13739be72904f893598b98b8d7
-  languageName: node
-  linkType: hard
-
-"hono@npm:^2.3.2":
-  version: 2.3.2
-  resolution: "hono@npm:2.3.2"
-  checksum: 99ba96ecf26afed77d7e0718225f10fe850bc5579b6feb6f5e5a245c7142b21b45aa9926d85d74d3faefaefbee6f9974b0067ee8c343c7c183f686df8a3f9d2e
   languageName: node
   linkType: hard
 

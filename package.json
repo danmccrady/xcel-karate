@@ -5,8 +5,7 @@
   "packageManager": "yarn@4.0.0-rc.30",
   "type": "module",
   "workspaces": [
-    "app",
-    "edge"
+    "app"
   ],
   "scripts": {
     "postinstall": "husky install && zx ./scripts/postinstall.js",

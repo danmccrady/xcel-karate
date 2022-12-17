@@ -6,16 +6,16 @@ import { Box, Button, Container, Typography } from "@mui/material";
 import { usePageEffect } from "../core/page.js";
 
 export default function Home(): JSX.Element {
-  usePageEffect({ title: "React App" });
+  usePageEffect({ title: "Xcel Karate" });
 
   return (
     <Container sx={{ py: "20vh" }} maxWidth="sm">
       <Typography sx={{ mb: 2 }} variant="h1" align="center">
-        Welcome to React Starter Kit!
+        Welcome to Xcel Karate!
       </Typography>
 
       <Typography sx={{ mb: 4 }} variant="h3" align="center">
-        The web&apos;s most popular Jamstack React template.
+        Iowa&apos;s most popular Karate Dojo.
       </Typography>
 
       <Box

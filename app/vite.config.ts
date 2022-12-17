@@ -17,7 +17,6 @@ const defineVars = [
   "FIREBASE_APP_ID",
   "FIREBASE_API_KEY",
   "FIREBASE_AUTH_DOMAIN",
-  "GA_MEASUREMENT_ID",
 ];
 
 /**

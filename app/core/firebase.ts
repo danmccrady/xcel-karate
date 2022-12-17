@@ -22,7 +22,6 @@ export const app = initializeApp({
   appId: FIREBASE_APP_ID,
   apiKey: FIREBASE_API_KEY,
   authDomain: FIREBASE_AUTH_DOMAIN,
-  measurementId: GA_MEASUREMENT_ID,
 });
 
 export const auth = getAuth(app);

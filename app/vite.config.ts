@@ -25,7 +25,7 @@ const defineVars = [
  */
 export default defineConfig({
   cacheDir: `../.cache/vite-${process.env.npm_package_name}`,
-
+  base: "/xcel-karate/",
   build: {
     outDir: "./dist",
     emptyOutDir: true,
@@ -56,7 +56,7 @@ export default defineConfig({
 
   server: {
     proxy: {
-      "/api": {
+      "/xcel-karate/api": {
         target: process.env.API_ORIGIN,
         changeOrigin: true,
       },

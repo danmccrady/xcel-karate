@@ -18,7 +18,7 @@ const data = (document.getElementById("data") as HTMLScriptElement).text;
 ReactDOM.createRoot(container).render(
   <React.StrictMode>
     <RecoilRoot>
-      <BrowserRouter>
+      <BrowserRouter basename="/xcel-karate/">
         <App />
       </BrowserRouter>
     </RecoilRoot>

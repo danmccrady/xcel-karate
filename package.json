@@ -1,5 +1,6 @@
 {
   "name": "root",
+  "homepage": "https://danmccrady.github.io/xcel-karate/",
   "version": "0.0.0",
   "private": true,
   "packageManager": "yarn@4.0.0-rc.30",
@@ -11,6 +12,7 @@
     "postinstall": "husky install && zx ./scripts/postinstall.js",
     "update-schema": "zx ./scripts/update-schema.js",
     "start": "zx ./scripts/start.js",
+    "deploy": "zx ./scripts/deploy.js",
     "lint": "eslint --cache --report-unused-disable-directives .",
     "test": "jest",
     "build": "yarn workspaces foreach -ti run build",

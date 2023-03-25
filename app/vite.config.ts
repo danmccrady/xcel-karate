@@ -56,7 +56,7 @@ export default defineConfig({
 
   server: {
     proxy: {
-      "/xcel-karate/api": {
+      "/api": {
         target: process.env.API_ORIGIN,
         changeOrigin: true,
       },

@@ -3,7 +3,7 @@
 
 import * as React from "react";
 import * as ReactDOM from "react-dom/client";
-import { BrowserRouter } from "react-router-dom";
+import { HashRouter } from "react-router-dom";
 import { RecoilRoot } from "recoil";
 import { App } from "./common/App.js";
 
@@ -18,9 +18,9 @@ const data = (document.getElementById("data") as HTMLScriptElement).text;
 ReactDOM.createRoot(container).render(
   <React.StrictMode>
     <RecoilRoot>
-      <BrowserRouter basename="/xcel-karate/">
+      <HashRouter>
         <App />
-      </BrowserRouter>
+      </HashRouter>
     </RecoilRoot>
   </React.StrictMode>
 );

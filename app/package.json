@@ -1,6 +1,6 @@
 {
   "name": "app",
-  "homepage": "https://danmccrady.github.io/xcel-karate/",
+  "homepage": "https://danmccrady.github.io/xcel-karate",
   "version": "0.0.0",
   "private": true,
   "type": "module",
@@ -8,8 +8,8 @@
     "start": "vite serve",
     "build": "vite build",
     "preview": "vite preview",
-    "deploy": "gh-pages -d dist",
-    "predeploy": "yarn run build"
+    "predeploy": "yarn run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@babel/runtime": "^7.20.1",

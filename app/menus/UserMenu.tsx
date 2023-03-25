@@ -68,7 +68,7 @@ export function UserMenu(props: UserMenuProps): JSX.Element {
           fontSize: "0.75rem",
         }}
       >
-        <span>&copy; 2021 Company Name</span>
+        <span>&copy; 2023 Iowa PC Solutions</span>
         <span style={{ padding: "0 4px" }}>•</span>
         <Link
           sx={{ color: "inherit" }}

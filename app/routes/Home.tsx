@@ -35,8 +35,8 @@ export default function Home(): JSX.Element {
         <Button
           variant="outlined"
           size="large"
-          href="https://github.com/kriasoft/react-starter-kit"
-          children="View on GitHub"
+          href="#"
+          children="Example Button 2"
           startIcon={<GitHub />}
         />
       </Box>

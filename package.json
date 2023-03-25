@@ -1,17 +1,18 @@
 {
   "name": "root",
+  "homepage": "https://danmccrady.github.io",
   "version": "0.0.0",
   "private": true,
   "packageManager": "yarn@4.0.0-rc.30",
   "type": "module",
   "workspaces": [
-    "app",
-    "edge"
+    "app"
   ],
   "scripts": {
     "postinstall": "husky install && zx ./scripts/postinstall.js",
     "update-schema": "zx ./scripts/update-schema.js",
     "start": "zx ./scripts/start.js",
+    "deploy": "zx ./scripts/deploy.js",
     "lint": "eslint --cache --report-unused-disable-directives .",
     "test": "jest",
     "build": "yarn workspaces foreach -ti run build",
@@ -55,6 +56,7 @@
     "eslint-plugin-react": "^7.31.11",
     "eslint-plugin-react-hooks": "^4.6.0",
     "execa": "^6.1.0",
+    "gh-pages": "^5.0.0",
     "got": "^12.5.3",
     "graphql": "^16.6.0",
     "husky": "^8.0.2",

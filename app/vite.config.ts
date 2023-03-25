@@ -17,7 +17,6 @@ const defineVars = [
   "FIREBASE_APP_ID",
   "FIREBASE_API_KEY",
   "FIREBASE_AUTH_DOMAIN",
-  "GA_MEASUREMENT_ID",
 ];
 
 /**
@@ -26,7 +25,7 @@ const defineVars = [
  */
 export default defineConfig({
   cacheDir: `../.cache/vite-${process.env.npm_package_name}`,
-
+  base: "/xcel-karate/",
   build: {
     outDir: "./dist",
     emptyOutDir: true,

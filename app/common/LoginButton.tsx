@@ -26,8 +26,6 @@ export function LoginButton(props: LoginButtonProps): JSX.Element {
           ? "Continue with Google"
           : method === "facebook.com"
           ? "Continue with Facebook"
-          : method === "anonymous"
-          ? "Continue as Anonymous"
           : `Continue with ${method}`}
       </span>
     </Button>

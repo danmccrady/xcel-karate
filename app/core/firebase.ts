@@ -9,11 +9,12 @@ import {
   getAuth,
   GoogleAuthProvider,
   OAuthCredential,
-  signInAnonymously,
   signInWithPopup,
+  User,
   type Auth,
   type UserCredential,
 } from "firebase/auth";
+import { collection, doc, getFirestore, setDoc } from "firebase/firestore";
 export { AuthErrorCodes, linkWithCredential } from "firebase/auth";
 export { FirebaseError };
 
@@ -23,6 +24,7 @@ export const app = initializeApp({
   apiKey: FIREBASE_API_KEY,
   authDomain: FIREBASE_AUTH_DOMAIN,
 });
+//setLogLevel("debug");
 
 export const auth = getAuth(app);
 export const analytics = getAnalytics(app);
@@ -37,7 +39,10 @@ export function signIn(options: SignInOptions): Promise<UserCredential> {
       ...(options.email && { login_hint: options.email }),
       prompt: "consent",
     });
-    return signInWithPopup(auth, provider);
+    return signInWithPopup(auth, provider).then(async (result) => {
+      await saveUserInfo(result.user);
+      return result;
+    });
   }
 
   // https://developers.facebook.com/docs/facebook-login/web
@@ -46,14 +51,27 @@ export function signIn(options: SignInOptions): Promise<UserCredential> {
     const provider = new FacebookAuthProvider();
     provider.addScope("public_profile");
     provider.addScope("email");
-    return signInWithPopup(auth, provider);
-  }
-
-  if (options.method === "anonymous") {
-    return signInAnonymously(auth);
+    return signInWithPopup(auth, provider).then(async (result) => {
+      await saveUserInfo(result.user);
+      return result;
+    });
   }
 
   throw new Error(`Not supported: ${options.method}`);
+}
+
+async function saveUserInfo(user: User) {
+  const userData = {
+    name: user.displayName,
+    email: user.email,
+    uid: user.uid,
+    lastUpdated: new Date(),
+  };
+  // Initialize Firestore instance
+  const db = getFirestore(app);
+
+  const usersCollection = collection(db, "users");
+  await setDoc(doc(usersCollection, user.uid), userData, { merge: true });
 }
 
 export async function getExistingAccountFromError(
@@ -95,8 +113,7 @@ export async function getExistingAccountFromError(
 
 export type SignInMethod =
   | typeof GoogleAuthProvider.PROVIDER_ID
-  | typeof FacebookAuthProvider.PROVIDER_ID
-  | "anonymous";
+  | typeof FacebookAuthProvider.PROVIDER_ID;
 
 export type SignInOptions = {
   method: SignInMethod;

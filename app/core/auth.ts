@@ -12,11 +12,7 @@ import {
   type SignInOptions,
 } from "./firebase.js";
 
-export const SignInMethods: SignInMethod[] = [
-  "google.com",
-  "facebook.com",
-  "anonymous",
-];
+export const SignInMethods: SignInMethod[] = ["google.com", "facebook.com"];
 
 export const CurrentUser = atom<User | null>({
   key: "CurrentUser",
